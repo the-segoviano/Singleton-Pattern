@@ -1,0 +1,40 @@
+import UIKit
+
+
+
+// This is the simplest way to create a singleton with Swift:
+
+class ClassName {
+
+    static let shared = ClassName()
+
+    var property: String = "Default value"
+    
+    private init() { }
+    
+}
+
+/*
+    As we can see, we declared a static constant called 'shared',
+    wich means we can access the 'shared' property via the ClassName.
+    This ensures access from anywhere.
+*/
+
+
+
+
+/*
+ 
+    Bad use of Singleton instance:
+
+    let instance = ClassName()
+ 
+*/
+
+
+
+// Right way:
+
+let instanceOfClassName = ClassName.shared
+
+print(instanceOfClassName.property)
